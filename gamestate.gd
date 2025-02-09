@@ -194,12 +194,12 @@ func begin_game():
 #region Steam Peer Management
 func create_steam_socket():
 	peer = SteamMultiplayerPeer.new()
-	peer.create_host(0, [])
+	peer.create_lobby(SteamMultiplayerPeer.LOBBY_TYPE_PUBLIC)
 	multiplayer.set_multiplayer_peer(peer)
 
 func connect_steam_socket(steam_id : int):
 	peer = SteamMultiplayerPeer.new()
-	peer.create_client(steam_id, 0, [])
+	peer.connect_lobby(steam_id)
 	multiplayer.set_multiplayer_peer(peer)
 
 #endregion

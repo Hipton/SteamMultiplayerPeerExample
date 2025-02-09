@@ -34,9 +34,11 @@ text = "The Warrior"
 [node name="TabContainer" type="TabContainer" parent="."]
 layout_mode = 2
 size_flags_vertical = 3
+current_tab = 0
 
 [node name="ENet" type="Control" parent="TabContainer"]
 layout_mode = 2
+metadata/_tab_index = 0
 
 [node name="Players" type="PanelContainer" parent="TabContainer/ENet"]
 layout_mode = 1
@@ -92,6 +94,7 @@ text = "Start Game"
 [node name="Steam" type="Control" parent="TabContainer"]
 visible = false
 layout_mode = 2
+metadata/_tab_index = 1
 
 [node name="Players" type="Panel" parent="TabContainer/Steam"]
 visible = false
